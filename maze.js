@@ -1,5 +1,4 @@
 window.onload = function(){
-alert("gggg");
 boundary1 = document.getElementById("boundary1")
 
 var x = document.querySelectorAll(".boundary");
@@ -26,12 +25,23 @@ end.onmouseover = function(){
 
 }
 
+
 start.onclick = function(){
     location.reload();
 }
 
+maze.onmouseleave = function(){
+    
+    for(let q=0; q< boundary.length; q++){
+        boundary[q].classList.add("youlose");
+        document.getElementById("status").innerHTML = "YOU LOSE!!";
+    }
+}
+
+
 boundary1.onmouseover = function(){
     boundary1.className += " youlose";
+    x.className += " youlose";
     status.innerHTML = "YOU LOSE!!";
 }
 
