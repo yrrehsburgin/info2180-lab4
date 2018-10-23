@@ -4,6 +4,7 @@ boundary1 = document.getElementById("boundary1")
 
 var x = document.querySelectorAll(".boundary");
 var boundary = document.getElementsByClassName("boundary");
+var end = document.getElementById("end");
 var a;
 var i;
 
@@ -14,7 +15,13 @@ for(a=0; a< boundary.length; a++){
         }
     }
 }
+
+end.onmouseover = function(){
+    alert("YOU WIN!!!");
+}
 boundary1.onmouseover = function(){
     boundary1.className += " youlose";
 }
+
+
 }
